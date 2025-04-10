@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| RunCloud Assesment
+| RunCloud Assessment
 |--------------------------------------------------------------------------
 |
 | RunCloud goal is to simplify server management for developers and businesses by providing 
@@ -29,7 +29,14 @@
  * You may do anything to let the code below work without changing anything.
  */
 
-print "\n\nRunCloud Assestment !\n\n";
+require_once 'vendor/autoload.php';
+
+use Project\BasicPlan;
+use Project\ProPlan;
+use Project\Server;
+use Project\User;
+
+print "\n\nRunCloud Assessment !\n\n";
 
 /*
 * Setting Up required details
@@ -62,7 +69,7 @@ $user->connectServer($server_2); // fail
 
 print "Flow #2 Upgrade Plan Subscription !\n\n";
 
-// upgrade to pro/business plan to have acccess 
+// upgrade to pro/business plan to have access
 // of connecting more than 1 server.
 $user->subscribe(new ProPlan());
 $user->connectServer($server_2); // success
@@ -73,7 +80,7 @@ $user->connectServer($server_2); // success
 
 print "Flow #3 Unsubscribe Plan Subscription !\n\n";
 
-// upgrade to pro/business plan to have acccess 
+// upgrade to pro/business plan to have access
 // of connecting more than 1 server.
 $user->unsubscribe();
 $user->connectServer($server_2); // fail
@@ -82,7 +89,7 @@ $user->connectServer($server_2); // fail
 |
 | Please submit the answer along with your Internship Application to career@runcloud.io
 |
-| You may upload it in your github or anywhere then include the link in the mail or you can also ZIP the code and
+| You may upload it in your GitHub or anywhere then include the link in the mail, or you can also ZIP the code and
 | attach the file in the mail.
 |
  */
